@@ -2,17 +2,20 @@ import java.util.Scanner;
 public class BOYLES_ACTIVITY_I {
     public static void main(String args[]) 
     {   
-       
-      Scanner s= new Scanner(System.in);
-        
-         System.out.println("Enter the width of the Triangle:");
-         int b= s.nextInt();
- 
-         System.out.println("Enter the length of the Triangle:");
-          int l= s.nextInt();
- 
-                  //Area = (width*length)
-      int area=(b*l);
-      System.out.println("Area of Triangle is: " + area);      
+
+        int length = getlength();
+        int width = getWidth() ;
+        int area = length*width;
+         System.out.println("Area - " + area);    
    }
+   static int getlength(){
+      Scanner input = new Scanner (System.in);
+      System.out.println("Input your Length");
+      return input.nextInt();
+   }
+   static int getWidth(){
+      Scanner input = new Scanner (System.in);
+      System.out.println("Input your Width");
+      return input.nextInt();
+}
 }
